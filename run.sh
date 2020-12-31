@@ -1,13 +1,5 @@
 #!/bin/bash
 
-source /etc/lsb-release
-
-if [[ "$DISTRIB_ID" -ne "Ubuntu" ]]; then
-  echo "No action taken..."
-  echo "Are you sure this is an Ubuntu system?"
-  exit 1
-fi
-
 if [[ $EUID -ne 0 ]]; then
   echo "No action taken..."
   echo "This script must be run as root"
